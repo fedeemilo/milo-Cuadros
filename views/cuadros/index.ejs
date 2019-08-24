@@ -1,0 +1,17 @@
+<h1>Index Cuadros!</h1> 
+
+<% cuadros.forEach(function(cuadro){ %>
+    <div>
+        <h2><%= cuadro.title %></h2>
+        <div>Valor: <%= cuadro.price %></div>
+        <div><%= cuadro.description %></div>
+        <div><%= cuadro.location %></div>
+        <div>
+            <% cuadro.images.forEach(function(image) { %>
+                <img src="<%= image.url %>" alt="Art by Guillermo Milone" width='200px'>
+            <% }); %>
+        </div>
+
+        <div><a href="/cuadros/<%= cuadro.id %>">Ver más!</a></div>
+    </div>
+<% }); %> 

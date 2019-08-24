@@ -1,0 +1,15 @@
+<h1>Nuevo Cuadro!</h1>
+
+<form action="/cuadros" method="POST" enctype="multipart/form-data"> 
+
+    <div><input type="text" name='cuadro[title]' placeholder="Título"></div>
+    <div><input type="text" name='cuadro[price]' placeholder="Valor"></div>
+    <div>
+        <input type="file" accept="images/*" name='images' multiple />
+    </div>
+    <div><textarea name="" id="" cols="30" rows="10" name='cuadro[decription]' placeholder="Descripción"></textarea></div>
+    <div><input type="text" name='cuadro[location]' placeholder="Ubicación"></div>
+
+    <input type="submit">
+</form>
+

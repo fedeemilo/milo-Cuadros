@@ -1,0 +1,20 @@
+<h1><%= cuadro.title %></h1>
+<div>Price: <%= cuadro.price %></div>
+<div><%= cuadro.description %></div>
+<div><%= cuadro.location %></div>
+<div>
+    <% cuadro.images.forEach(function(image) { %>
+        <img src="<%= image.url %>" alt="Producto mg-electronica" width='200px'>
+    <% }); %>
+</div>
+
+<div>
+    <a href="/cuadros/<%= cuadro.id %>/edit">
+        <button>Editar</button>
+    </a>
+</div>
+<div>
+    <form action="/cuadros/<%= cuadro.id %>?_method=DELETE" method='POST'>
+        <input type="submit" value='Delete'>
+    </form>
+</div>
